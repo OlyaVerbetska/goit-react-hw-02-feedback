@@ -1,6 +1,8 @@
 import { Component } from 'react';
-// import shortid from 'shortid';
 import Statistics from './components/Statistics';
+import FeedbackOptions from './components/FeedbackOptions.js';
+import Section from './components/Section';
+import Notification from './components/Notification';
 
 class App extends Component {
   state = {
@@ -28,15 +30,17 @@ class App extends Component {
 
     return (
       <div className="Feedback">
-        <h1>Please leave Feedback </h1>
-        {options.map((option, index) => (
-          <button type="button" name={option} key={index} onClick={this.leaveFeedback}>
-            {option[0].toUpperCase() + option.substring(1)}
-          </button>
-        ))}
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positiveFeedback} />
-        {/*
-         */}
+        <Section title="Please leave Feedback">
+          <FeedbackOptions options={options} onLeaveFeedback={this.leaveFeedback} />
+        </Section>
+
+        {total ? (
+          <Section title="Statistics">
+            <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positiveFeedback} />
+          </Section>
+        ) : (
+          <Notification message="No feedback given" />
+        )}
       </div>
     );
   }

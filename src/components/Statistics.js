@@ -1,24 +1,15 @@
 import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div>
-    <h1>Statistics</h1>
+  <ul>
+    <li> Good:{good} </li>
+    <li> Neutral:{neutral}</li>
+    <li> Bad: {bad}</li>
 
-    <ul>
-      <li> Good:{good} </li>
-      <li> Neutral:{neutral}</li>
-      <li> Bad: {bad}</li>
-    </ul>
-    <ul>
-      <p> Total:{total} </p>
-      <p> Positive feedback:{positivePercentage}</p>
-    </ul>
-  </div>
+    <li> Total:{total} </li>
+    <li> Positive feedback:{positivePercentage}</li>
+  </ul>
 );
-
-// Profile.defaultProps = {
-//   avatar: imagePlacer,
-// };
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
