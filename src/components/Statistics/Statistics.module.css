@@ -1,0 +1,13 @@
+.Statistics {
+  list-style: none;
+}
+.Statistics__item {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.Statistics__name {
+  font-weight: 600;
+  display: inline-block;
+  padding-right: 15px;
+}

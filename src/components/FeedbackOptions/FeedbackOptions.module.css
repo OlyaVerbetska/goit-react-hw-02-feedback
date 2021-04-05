@@ -1,0 +1,27 @@
+.buttonList {
+  list-style: none;
+  padding: 0;
+}
+.buttonList:last-child {
+  margin-bottom: 0;
+}
+
+.buttonList__item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  min-width: 200px;
+  height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: transparent;
+  border-radius: 10px;
+  border: transparent;
+  background-color: rgb(141, 194, 243);
+}
+.button:hover {
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}

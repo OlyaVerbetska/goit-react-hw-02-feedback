@@ -1,8 +1,10 @@
 import { Component } from 'react';
 import Statistics from './components/Statistics';
-import FeedbackOptions from './components/FeedbackOptions.js';
+import FeedbackOptions from './components/FeedbackOptions';
 import Section from './components/Section';
 import Notification from './components/Notification';
+
+import '../src/styles.css';
 
 class App extends Component {
   state = {
@@ -39,7 +41,7 @@ class App extends Component {
             <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positiveFeedback} />
           </Section>
         ) : (
-          <Notification message="No feedback given" />
+          <Notification message="No feedback given yet" />
         )}
       </div>
     );

@@ -1,0 +1,9 @@
+.section {
+  flex-basis: calc(100% / 2 - 10px);
+}
+.section__title {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+  text-decoration: underline;
+}

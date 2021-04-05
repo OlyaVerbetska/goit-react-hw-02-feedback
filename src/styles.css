@@ -1,0 +1,13 @@
+.Feedback {
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+
+  border-radius: 30px;
+
+  font-family: 'Noto Sans TC', serif;
+  color: #383434;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
